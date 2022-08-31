@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="IT">
+<head>
+    <title>Categorie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stile_musei.css">
+</head>
+<body>
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="mappa.html">Mappa</a>
+    <a href="esplora.html">Esplora</a>
+    <a class="active" href="categorie.html">Categorie</a>
+    <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="login">Login</a>
+    <a onclick="document.getElementById('id02').style.display='block'" style="width:auto;" id="register">Registrati</a>
+        <div class="search-container">
+      <form action="/" method="POST">
+        <input type="text" placeholder="Cerca.." name="search">
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <header>
+    <div id="hd_sx">
+       <!-- bla bla bla -->
+    </div>
+    <div  id="hd_centro">
+      <h1>I Musei Lombardi</h1> 
+    </div>
+    <div id="hd_dx">
+      <!-- bla bla bla -->
+    </div>
+  </header> 
+  
+
+<!-- div nascosto login -->
+  <div id="id01" class="modal">
+  
+    <form class="modal-content animate" action="/login" method="POST">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="container">
+        <label for="uname1"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id="uname1" name="username" required class="modal_input">
+  
+        <label for="psw1"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw1" name="password" required class="modal_input"> 
+          
+        <input type="submit" class="login_button" name="submit" >
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+  <!-- FINE -->
+
+<!-- div nascosto registrati -->
+  <div id="id02" class="modal">
+  
+    <form class="modal-content animate" action="/registrati" method="POST">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="http://localhost:5000/img/img_avatar2.png" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="container">
+        <label for="uname2"><b>Username</b></label> 
+        <input type="text" placeholder="Enter Username" id="uname2" name="username" required class="modal_input">
+  
+        <label for="psw2"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw2" name="password" required class="modal_input"> 
+
+        <label for="provincia"><b>Provincia</b></label>
+        <input type="text" placeholder="Enter Provincia" id="provincia" name="provincia" required class="modal_input">
+
+        <label for="email"><b>E-Mail</b></label>
+        <input type="text" placeholder="Enter Email" id="email" name="email" required class="modal_input">
+          
+        <input type="submit" class="register_button" name="submit" >
+        
+      </div>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+<!-- FINE -->
+
+      <!-- main -->
+      <div class="main">
+
+        <!-- sinistra -->
+        <div id="sx">
+          
+
+        </div> 
+
+        <!-- centro -->
+        <div id="centro">
+       
+        <h2> Work in Progress</h2>
+        </div>
+
+        <!-- destra -->
+        <div id="dx">  
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div id=basso>
+        <footer>
+          
+            <h3>Developed by Andrea Celaj & Lorenzo Marchetti Pia</h3>
+            <p><b>Contatti: </b>lorenzo.marchetti2@studenti.unimi.it &nbsp andrea.celaj@studenti.unimi.it</p> 
+            
+            </footer>
+      </div>
+</body>
+
+
+
+
+</html>

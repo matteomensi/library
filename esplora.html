@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="IT">
+<head>
+    <title>Esplora</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stile_esplora.css">
+</head>
+<body>
+  
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="mappa.html">Mappa</a>
+    <a class="active" href="esplora.html">Esplora</a>
+    <a href="categorie.html">Categorie</a>
+    <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="login">Login</a>
+    <a onclick="document.getElementById('id02').style.display='block'" style="width:auto;" id="register">Registrati</a>
+        <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Cerca.." name="search">
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <header>
+    <div id="hd_sx">
+       <!-- bla bla bla -->
+    </div>
+    <div  id="hd_centro">
+      <h1>I Musei Lombardi</h1> 
+    </div>
+    <div id="hd_dx">
+      <!-- bla bla bla -->
+    </div>
+  </header> 
+
+  <!-- div nascosto login -->
+  <div id="id01" class="modal">
+  
+    <form class="modal-content animate" action="/login" method="POST">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="container">
+        <label for="uname1"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id="uname1" name="username" required class="modal_input">
+  
+        <label for="psw1"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw1" name="password" required class="modal_input"> 
+          
+        <input type="submit" class="login_button" name="submit" >
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+  <!-- FINE -->
+
+  <!-- div nascosto registrati -->
+  <div id="id02" class="modal">
+  
+    <form class="modal-content animate" action="/registrati" method="POST">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="http://localhost:5000/img/img_avatar2.png" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="container">
+        <label for="uname2"><b>Username</b></label> 
+        <input type="text" placeholder="Enter Username" id="uname2" name="username" required class="modal_input">
+  
+        <label for="psw2"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw2" name="password" required class="modal_input"> 
+
+        <label for="provincia"><b>Provincia</b></label>
+        <input type="text" placeholder="Enter Provincia" id="provincia" name="provincia" required class="modal_input">
+
+        <label for="email"><b>E-Mail</b></label>
+        <input type="text" placeholder="Enter Email" id="email" name="email" required class="modal_input">
+          
+        <input type="submit" class="register_button" name="submit" >
+        
+      </div>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+<!-- FINE -->
+
+
+
+
+
+
+      <!-- main -->
+      <div class="main main_esplora">
+
+        <!-- sinistra -->
+        <div id="sx">
+          
+
+        </div> 
+
+        <!-- centro -->
+        <div id="centro">
+            <h1>Musei Consigliati</h1> <br>
+            <p>La nostra redazione ha personalmente selezionato i seguenti musei suddivisi per categoria, per aprire la relativa pagina web, <b>fare clic sull'immagine</b> del museo selezionato</p>
+            
+        <h2>Musei Di Storia</h2>
+            <!--Inizio Elenco  -->
+
+            <!-- Voce 1 -->
+            <div class="elenco">
+                <div class="elenco_sx">
+                <a href="http://www.museodeitasso.com" target="new"> <img src="img/img1_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Museo Dei Tasso e della Storia Postale</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Storia</p>
+                    <p class="tag">Prova</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+            <!-- /Voce1 -->
+
+            <!-- Voce2 -->
+            <div class="elenco">
+                <div class="elenco_sx">
+                    <a href="http://www.bergamoestoria.it" target="new"> <img src="img/img20_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Museo delle Storie di Bergamo</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Storia</p>
+                    <p class="tag">Prova</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+                
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+            <!-- /Voce2 -->
+
+
+            <!-- Voce 3 -->
+            <div class="elenco">
+                <div class="elenco_sx">
+                    <a href="http://www.museoguerrabianca.it" target="new"> <img src="img/img136_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Museo della Guerra Bianca in Adamello</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Storia</p>
+                    <p class="tag">Prova</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+                
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+            
+
+            <!-- Voce4 -->
+            <div class="elenco">
+                <div class="elenco_sx">
+                    <a href="http://WWW.MUSEOFELONICA.IT" target="new"> <img src="img/img164_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Museo della WWII del Fiume Po</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Storia</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+                
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+
+
+            <!-- voce5 -->
+            <div class="elenco">
+                <div class="elenco_sx">
+                    <a href="http://www.museofineguerradongo.it" target="new"> <img src="img/img258_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Museo della Fine della Guerra</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Storia</p>
+                    <p class="tag">Prova</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+                
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+
+
+            <h2>Musei Di Archeologia</h2>
+
+
+            <!-- /Elenco2 -->
+
+            <div class="elenco">
+                <div class="elenco_sx">
+                    <a href="http://www.museocasteggio.it" target="new"> <img src="img/img6_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Civico Museo Archeologico di Casteggio</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Archeologia</p>
+                    <p class="tag">Prova</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+                
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+
+            <div class="elenco">
+                <div class="elenco_sx">
+                    <a href="http://www.museoarcheologicogambolo.altervista.org" target="new"> <img src="img/img7_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Museo Archeologico Lomellino</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Archeologia</p>
+                    <p class="tag">Prova</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+                
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+
+
+
+            <div class="elenco">
+                <div class="elenco_sx">
+                    <a href="http://www.museilecco.org" target="new"> <img src="img/img9_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Museo Archeologico</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Archeologia</p>
+                    <p class="tag">Prova</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+                
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+
+
+
+            <div class="elenco">
+                <div class="elenco_sx">
+                    <a href="http://www.comune.milano.it/museoarcheologico" target="new"> <img src="img/img16_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Museo Archeologico di Milano</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Archeologia</p>
+                    <p class="tag">Prova</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+                
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+
+
+
+
+            <h2>Musei Etnografici</h2>
+
+
+            <div class="elenco">
+                <div class="elenco_sx">
+                    <a href="http://www.museotinosana.it" target="new"> <img src="img/img3_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Museo del Falegname Tino Sana</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Etnografico</p>
+                    <p class="tag">Prova</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+                
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+
+
+
+            <div class="elenco">
+                <div class="elenco_sx">
+                    <a href="http://www.valdiscalve.it" target="new"> <img src="img/img4_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Museo Etnografico</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Etnografico</p>
+                    <p class="tag">Prova</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+
+
+
+            <div class="elenco">
+                <div class="elenco_sx">
+                    <a href="http://www.pimemilano.com" target="new"> <img src="img/img5_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Museo Popoli e Culture</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Etnografico</p>
+                    <p class="tag">Prova</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+
+
+
+            <div class="elenco">
+                <div class="elenco_sx">
+                    <a href="http://www.viviardesio.it" target="new"> <img src="img/img19_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Museo Etnografico dell'Alta Valle Seriana</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Etnografico</p>
+                    <p class="tag">Prova</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+
+
+
+            
+
+            <h2>Musei Di Storia Naturale</h2>
+
+
+            <div class="elenco">
+                <div class="elenco_sx">
+                    <a href="http://musei.comune.cremona.it" target="new"> <img src="img/img12_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Museo di Storia Naturale di Cremona</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Scienze</p>
+                    <p class="tag">Prova</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+
+
+            <div class="elenco">
+                <div class="elenco_sx">
+                    <a href="http://museoscienzebergamo.it" target="new"> <img src="img/img51_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Museo Civico di Scienze Naturali "E.Caffi"</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Scienze</p>
+                    <p class="tag">Prova</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+
+
+            <div class="elenco">
+                <div class="elenco_sx">
+                    <a href="http://www.museosandanielepo.com" target="new"> <img src="img/img52_1.jpg" class="img_elenco" alt="img"> </a>
+                </div>
+
+                <div class="elenco_centro">
+                    <div class="elenco_centro_su">
+                        <h3>Museo Paleoantropologico del Po</h3>
+                    </div>
+
+                    <div class="elenco_centro_giu">
+                    <p class="tags_scritta">Tags:</p>
+                    <p class="tag">Scienze</p>
+                    <p class="tag">Prova</p>
+                    <p class="tag">Prova</p>
+                    
+                    </div>
+                </div>
+
+                <div class="elenco_dx">
+
+                </div>
+            </div>
+
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+
+            
+        </div>
+
+        <!-- destra -->
+        <div id="dx"> 
+
+         
+        </div>
+
+        
+
+      </div>
+
+      
+      <div id="basso_esplora">
+        <footer>
+          
+            <h3>Developed by Andrea Celaj & Lorenzo Marchetti Pia</h3>
+            <p><b>Contatti: </b>lorenzo.marchetti2@studenti.unimi.it &nbsp; andrea.celaj@studenti.unimi.it</p> 
+            
+            </footer>
+      </div>
+
+</body>
+
+</html>

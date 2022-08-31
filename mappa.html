@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="IT">
+<head>
+  <!-- script linking-->
+    <title>Mappa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="stile_musei.css">
+    
+</head>
+<body>
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="mappa.html" class="active" >Mappa</a>
+    <a href="esplora.html">Esplora</a>
+    <a href="categorie.html">Categorie</a>
+    <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="login">Login</a>
+    <a onclick="document.getElementById('id02').style.display='block'" style="width:auto;" id="register">Registrati</a>
+        <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Cerca.." name="search">
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+  <header>
+    <div id="hd_sx">
+       <!-- sinistra -->
+    </div>
+    <div  id="hd_centro">
+      <h1>Le Biblioteche Lombarde</h1> 
+      <!-- centro -->
+    </div>
+    <div id="hd_dx">
+      <!-- destra -->
+    </div>
+  </header> 
+
+  <!-- div nascosto login -->
+  <div id="id01" class="modal">
+  
+    <form class="modal-content animate" action="/login" method="POST">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="container">
+        <label for="uname1"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id="uname1" name="username" required class="modal_input">
+  
+        <label for="psw1"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw1" name="password" required class="modal_input"> 
+          
+        <input type="submit" class="login_button" name="submit" >
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+  <!-- FINE -->
+  
+
+  <!-- div nascosto registrati -->
+  <div id="id02" class="modal">
+  
+    <form class="modal-content animate" action="/registrati" method="POST">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="http://localhost:5000/img/img_avatar2.png" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="container">
+        <label for="uname2"><b>Username</b></label> 
+        <input type="text" placeholder="Enter Username" id="uname2" name="username" required class="modal_input">
+  
+        <label for="psw2"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw2" name="password" required class="modal_input"> 
+
+        <label for="provincia"><b>Provincia</b></label>
+        <input type="text" placeholder="Enter Provincia" id="provincia" name="provincia" required class="modal_input">
+
+        <label for="email"><b>E-Mail</b></label>
+        <input type="text" placeholder="Enter Email" id="email" name="email" required class="modal_input">
+          
+        <input type="submit" class="register_button" name="submit" >
+        
+      </div>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+<!-- FINE -->
+
+
+      <!-- main -->
+      <div class="main">
+
+        <!-- sinistra -->
+        <div id="sx">
+                <div id="menu_sx_alto">
+                  <nav>
+                      <h3>Province</h3>
+                      <ul>
+                        <!-- checkbox list -->
+                        <li><input type="checkbox" id="BG" name="bergamo" value="BG">Bergamo</li>
+                        <li><input type="checkbox" id="BS" name="brescia" value="BS">Brescia</li>
+                        <li><input type="checkbox" id="CO" name="como" value="CO">Como</li>
+                        <li><input type="checkbox" id="CR" name="cremona" value="CR">Cremona</li>
+                        <li><input type="checkbox" id="LC" name="lecco" value="LC">Lecco</li>
+                        <li><input type="checkbox" id="LO" name="lodi" value="LO">Lodi</li>
+                        <li><input type="checkbox" id="MN" name="mantova" value="MN">Mantova</li>
+                        <li><input type="checkbox" id="MI" name="milano" value="MI">Milano</li>
+                        <li><input type="checkbox" id="MB" name="monza_brianza" value="MB">Monza e Brianza</li>
+                        <li><input type="checkbox" id="PV" name="pavia" value="PV">Pavia</li>   
+                        <li><input type="checkbox" id="SO" name="sondrio" value="SO">Sondrio</li>
+                        <li><input type="checkbox" id="VA" name="varese" value="VA">Varese</li>                         
+                    </ul>
+
+                    <button onclick="Displaymap()" id="ciao">Filtra</button>
+                  </nav>
+                </div>
+
+                <div id="menu_sx_basso">
+                    <nav>
+                        
+                        
+                    </nav>
+                  </div>
+        
+        </div> 
+
+        <!-- centro -->
+        <div id="centro">
+          <div class="mapcontainer">
+          <div id="basicMap" style="width: 100%; height: 100%; border-radius: 5%;"></div>
+          </div>
+          
+        
+                  
+          
+        </div>
+
+        <!-- destra -->
+        <div id="dx"> 
+
+         
+        </div>
+      </div>
+
+      <div id=basso>
+        <footer>
+          
+          <h3>Developed by Matteo Mensi</h3>
+          <p><b>Contatti: </b>matteo.mensi2@studenti.unimi.it</p> 
+          
+          </footer>
+      </div>
+      
+     
+
+
+</body>
+
+
+
+
+</html>
